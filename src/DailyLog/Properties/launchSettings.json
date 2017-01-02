@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DailyLog": {
+      "commandName": "Project",
+      "commandLineArgs": "-m \"log args\""
+    }
+  }
+}
