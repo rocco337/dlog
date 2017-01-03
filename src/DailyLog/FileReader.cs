@@ -3,11 +3,11 @@ using System.IO;
 
 namespace DailyLog
 {
-    public class FileReader
+    public class FileLineAppender
     {
         private readonly FileStream _fileStream;
 
-        public FileReader(string filePath)
+        public FileLineAppender(string filePath)
         {
             if (filePath == null) throw new ArgumentNullException(nameof(filePath));
 

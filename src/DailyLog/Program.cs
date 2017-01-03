@@ -8,7 +8,7 @@ namespace DailyLog
         {
             var filePath = (new FilePathEnviromentVariableSetter()).GetAndSetIfDoesntExists();
 
-            var file = new FileReader(filePath);
+            var file = new FileLineAppender(filePath);
             for (var ii = 0; ii < args.Length; ii++)
             {
                 //message
