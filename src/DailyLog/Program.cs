@@ -15,10 +15,21 @@ namespace DailyLog
                 if (args[ii] == "-m")
                 {
                     var message = args[++ii];
-                    file.AppendLine($"{DateTime.Now} : {message}");
-                    Console.WriteLine("Message logged!");
+
+                    //check if there is list of tags for message
+                    string[] tags = null;
+                    if (args.Length - 1 > ii)
+                        tags = args[++ii] != null ? args[ii].Split(',') : null;
+                        
+                    if (!string.IsNullOrEmpty(message))
+                    {
+                        file.AppendLine(new MessageEntity(message, tags).ToString());
+                        Console.WriteLine("Message logged!");
+                    }
                 }
             }
         }
     }
+
+   
 }
