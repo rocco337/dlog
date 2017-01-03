@@ -16,7 +16,7 @@ namespace DailyLog {
 
         public override string ToString()
         {
-            return $"{this.DateTime.ToString("dd/mm/yyyy hh:MM")} - {this.Message} - {String.Join(",", this.Tags)}";
+            return $"{this.DateTime.ToString("dd/MM/yyyy hh:mm")} - {this.Message} - {String.Join(",", this.Tags)}";
         }
 
     }
