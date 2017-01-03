@@ -8,9 +8,10 @@ namespace DailyLog
         private const string VariableName = "dlog_filepath";
 
         public string GetAndSetIfDoesntExists()
-        {
+        {           
             var filePath = Environment.GetEnvironmentVariable(VariableName);
             if (!string.IsNullOrEmpty(filePath)) return filePath;
+            
             
             Console.WriteLine("Path of log file:");
             filePath = Console.ReadLine();
